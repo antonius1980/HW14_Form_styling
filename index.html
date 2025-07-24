@@ -10,65 +10,96 @@
 
     <main class="main">
         <div class="container flex-container">
-            <div class="side">
+            <div class="side side-signup">
                 <h2 class="title_2">Create an Account</h2>
-                <form  id="signup_form" class="form signup_form" name="signup_form" action="#" method="post">
+                <form  id="signup_form" class="form signup-form" name="signup-form" action="#" method="post">
                     <input type="hidden" name="" id="form_name" value="Signup form">
                     <div class="row">
-                        <label for="first_name" class="row__label">First Name</label><input type="text" id="first_name" class="row__input">
+                        <label for="first_name" class="row__label">First Name</label><input type="text" id="first_name" name="first_name" class="row__input" placeholder="Your first name">
                     </div>
                     <div class="row">
-                        <label for="" class="row__label">Last Name</label><input type="text" id="input2" class="row__input">
+                        <label for="last_name" class="row__label">Last Name</label><input type="text" id="last_name" name="last_name" class="row__input" placeholder="Your last name">
+                    </div>
+                    <div class="row one-col">
+                        <label for="" class="row__label">E-mail</label><input type="email" id="email" name="email" class="row__input" placeholder="username@email.com">
+                        <span class="small">We'll never share your email with anyone else.</span>
                     </div>
                     <div class="row">
-                        <label for="" class="row__label">E-mail</label><input type="text" id="input3" class="row__input">
+                        <label for="gender_male" class="row__label">Male</label>
+                        <input type="radio" class="row__input row__select" name="gender" id="gender_male">
+                        <label for="gender_female" class="row__label">Female</label>
+                        <input type="radio" class="row__input row__select" name="gender" id="gender_female">
                     </div>
                     <div class="row">
-                        <label for="" class="row__label">We'll never share your email with anyone else.</label><input type="text" id="input4" class="row__input">
+                        <label for="country" class="row__label">Country</label>
+                            <select class="row__input row__select" name="country" id="country" required>
+                                <option value="" selected disabled>Select</option>
+                                <option value="UA">Ukraine</option>
+                                <option value="DE">Germany</option>
+                                <option value="US">US</option>
+                                <option value="other">Some Other</option>
+                            </select>
                     </div>
                     <div class="row">
-                        <label for="" class="row__label"></label><input type="text" id="input5" class="row__input">
+                        <label for="city" class="row__label ">City</label><input type="text" id="city" class="row__input" placeholder="Your city">
                     </div>
-                    <div class="row">
-                        <label for="" class="row__label"></label><input type="text" id="input6" class="row__input">
+                    <div class="row one-col">
+                        <button id="submit" class="btn btn-primary btn--block" type="submit">Sign Up</button>
                     </div>
-                    <div class="row">
-                        <label for="" class="row__label"></label><input type="text" id="input7" class="row__input">
-                    </div>
-                    <div class="row">
-                        <button id="submit" class="btn btn-primary" type="submit"></button>
+                    <div class="row one-col form-bottom-row">
+                        <p class="small">By clicking the 'Sign Up' button, you confirm that you accept our<br><a class="form-bottom-row__link" href="#">Terms of Use</a>
+                         and <a  class="form-bottom-row__link" href="#">Privacy Policy</a>
+                        </p>                    
                     </div>
                 </form>
+                <footer class="side-footer">
+                    <p>Have an account?<a class="side-footer__link" href="#">Log In</a></p>
+                </footer>
             </div>
-            <div class="side">
+            <div class="side side-profile">
                 <h2 class="title_2">Profile</h2>
-                <form id="profile_form" class="form profile_form" name="profile_form" action="#" method="post">
-                    <input type="hidden" name="form_name" value="Signup form">
+                <form id="profile-form" class="form profile-form" name="profile-form" action="#" method="post" enctype="multipart/form-data">
+                    <input type="hidden" name="form_name" value="Profile form">
                     <div class="row">
-                        <label for="" class="row__label">First Name</label><input type="text" id="input1" class="row__input">
+                        <label for="" class="row__label"></label>
+                    </div>
+                    <div class="row file-row">
+                        <label for="profile_pic" class="row__label file-row__label"><input type="file" id="profile_pic" name="profile_pic" class="row__input" -hidden  accept=".jpg, .jpeg, .png, webp" ></label>
                     </div>
                     <div class="row">
-                        <label for="" class="row__label">Last Name</label><input type="text" id="input2" class="row__input">
+                        <label for="profile_name" class="row__label">Name</label><input type="text" id="profile_name" name="profile_name" class="row__input" placeholder="Your full name">
+                    </div>
+                    <div class="row one-col">
+                        <label for="profile_email" class="row__label">E-mail</label><input type="email" id="profile_email" name="profile_email" class="row__input" placeholder="username@email.com">
+                        <span class="small">We'll never share your email with anyone else.</span>
                     </div>
                     <div class="row">
-                        <label for="" class="row__label">E-mail</label><input type="text" id="input3" class="row__input">
+                        <label for="profile_country" class="row__label">Country</label>
+                            <select class="row__input row__select" name="profile_country" id="profile_country" required>
+                                <option value="" selected disabled>Select</option>
+                                <option value="UA">Ukraine</option>
+                                <option value="DE">Germany</option>
+                                <option value="US">US</option>
+                                <option value="other">Some Other</option>
+                            </select>
                     </div>
                     <div class="row">
-                        <label for="" class="row__label">We'll never share your email with anyone else.</label><input type="text" id="input4" class="row__input">
+                        <label for="profile_city" class="row__label ">City</label><input type="text" id="profile_city" name="profile_city" class="row__input" placeholder="Your city">
+                    </div>
+
+
+                    <div class="row">
+                        <label for="profile_zip" class="row__label">Zip Code</label><input type="text" id="profile_zip" name="profile_zip" class="row__input" placeholder="5-6 digits zip code">
                     </div>
                     <div class="row">
-                        <label for="" class="row__label"></label><input type="text" id="input5" class="row__input">
+                        <label for="profile_phone" class="row__label">Phone Number</label><input type="phone" id="profile_phone" name="profile_phone" class="row__input" placeholder="+38 (093) 555-5555">
                     </div>
                     <div class="row">
-                        <label for="" class="row__label"></label><input type="text" id="input6" class="row__input">
-                    </div>
-                    <div class="row">
-                        <label for="" class="row__label"></label><input type="text" id="input7" class="row__input">
+                        <button id="submit_update" class="btn btn-primary" type="submit">Update</button>
                     </div>
                 </form>
             </div>
         </div>
     </main>
-
 </body>
 </html>

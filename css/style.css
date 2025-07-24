@@ -1,5 +1,6 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap');
 @import url("./vars.css");
+
 
 * {
 	padding: 0;
@@ -22,15 +23,49 @@ body {
 	font-size: var(--main-font-size);
 	font-weight: 400;
 	font-style: normal;
-	line-height: 4.8rem;
-	color: #000;
+	line-height: 2.2rem;
+	color: var(--main-font-color);
 	min-height: 100vh;
 }
 
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+:focus {
+    outline-color: var(--accent-color);
+}
+
 .btn {
-    padding: 8px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    padding: 8px 10px;
     border-radius: 6px;
-    color: #fff;;
+    color: #fff;
+    background-color: var(--accent-color);
+    border:2px solid var(--accent-color);
+    cursor: pointer;
+    min-width: 15rem;
+}
+
+.btn.btn-primary {
+    
+}
+
+.btn--block {
+display: block;
+width:100%;
+}
+
+.btn:hover {
+    background-color: #fff;
+    color: #007BFF;
 }
 
 
@@ -38,7 +73,7 @@ body {
 	width: 100%;
 	max-width: var(--container-width);
 	margin: 0 auto;
-	padding: 0 15px;
+	padding: 55px 15px;
 }
 
 .flex-container {
@@ -55,15 +90,194 @@ body {
     border-radius: 6px;
     width: 100%;
     min-width: 570px;
-    padding: 35px 16px 35px;
+    min-height: 590px;
+    padding: 35px 35px 16px;
 }
 
 .title_2 {
-    color: ;
+    color: var(--heading-color);
     font-size: 2.4rem;
+    line-height: 3.2rem;
+    font-weight: 500;
+    margin-bottom: 20px;
 }
 
+.form {
+    display: flex;
+    justify-content: space-between;
+    row-gap: 12px;
+    flex-flow: row wrap;
+
+
+}
+
+.row {
+    /* flex: 1 1 50%;  */
+    width:calc(50% - 6px);
+}
+
+.row.one-col {
+    /* flex: 1 1 50%;  */
+    width: 100%;
+}
+
+.row__label {
+    display:block;
+    margin-bottom: 7px;
+}
+
+input,
+select {
+
+}
+
+
 input {
+
+}
+
+select {
+
+}
+
+.row__input,
+.row__select {
+    line-height: 2.4rem;
     border: 1px solid #e4e4e4;
     border-radius: 6px;
+    padding: 7px 10px;
+    width: 100%;
 }
+
+.row__input[type='checkbox'],
+.row__input[type='radio'] {
+    width:auto;
+    padding: initial;
+}
+
+.row__input[type='file'] {
+    appearance: none;
+}
+
+
+.row__input[type='checkbox'] {
+
+}
+
+.row__input[type='radio'] {
+
+}
+
+.row__input {
+
+}
+
+.row__input::placeholder {
+    color:#54545466;
+}
+
+.row__select {
+    appearance:none;
+    position: relative;
+}
+
+.row__select option {
+  appearance: none;
+  width: 50%;
+  padding: 10px;
+  color:var(--main-font-color);
+}
+
+.row__select:invalid,
+.row__select option[disabled] {
+  color: #54545466;
+}
+
+
+.row__select::after {
+    content: "^";
+    position: absolute;
+    right: 10px;
+    top:10px;
+    color: red;
+    width: 10px;
+    height: 10px;
+
+}
+
+.file-row__label {
+  display: inline-block;
+  cursor: pointer;
+  -padding: 6px 12px;
+  -background-color: #eee;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: #333;
+}
+.file-row__label input {
+  -display: none;
+}
+
+.file-row__label input[type="file"]::file-selector-button {
+    color: transparent;
+    background: #fff url(./../assets/img/camera_icon.png) no-repeat 95% center;
+    border: none;
+    line-height: 2.4rem;
+    border: 1px solid #e4e4e4;
+    border-radius: 6px;
+    padding: 7px 10px;
+    width: 100%;
+    margin: 0; padding: 0;
+}
+
+.row .btn--block {
+    margin-top:20px;
+}
+
+input:focus,
+select:focus {
+    /* outline: 2px outset #007BFF; */
+}
+
+.form-bottom-row {
+    text-align: center;
+    padding: 22px 45px 20px;
+}
+
+.form-bottom-row a {
+ font-family: "Inter", sans-serif;
+ font-size: 1.3rem;
+ line-height: 1.8rem;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: -0.1px;
+
+}
+
+.side-footer {
+    padding: 20px 0px 16px;
+    border-top: 1px solid #E4E4E4;
+}
+
+.side-footer p {
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+    text-align: center;
+    letter-spacing: -0.2px;
+}
+
+.side-footer__link {
+    margin-left:20px;
+    font-weight: 500;
+    letter-spacing: -0.2px;
+}
+
+
+
+.small {
+    color: var(--secondary-color);
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+}
+
