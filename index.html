@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Lesson 14 Form Style</title>
+	<title>Sign Up Form</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -11,7 +11,7 @@
     <main class="main">
         <div class="container flex-container">
             <div class="side side-signup">
-                <h2 class="title_2">Create an Account</h2>
+                <h2 class="side-title">Create an Account</h2>
                 <form  id="signup_form" class="form signup-form" name="signup-form" action="#" method="post">
                     <input type="hidden" name="form_name" id="form_name" value="Signup form">
                     <div class="row">
@@ -25,15 +25,7 @@
                         <span class="note">We'll never share your email with anyone else.</span>
                     </div>
                     <div class="row radio-row one-col">
-                        <label for="gender_male" class="row__label row__radio-label">
-                            <input type="radio" class="row__input row__select" name="gender" id="gender_male">
-                            <span>Male</span>
-                        </label>
-                        
-                        <label for="gender_female" class="row__label row__radio-label">
-                            <input type="radio" class="row__input row__select" name="gender" id="gender_female">
-                            <span>Female</span>
-                        </label>
+                        <label for="gender_male" class="row__label row__radio-label"><input type="radio" class="row__input row__select" name="gender" id="gender_male"><span>Male</span></label><label for="gender_female" class="row__label row__radio-label"><input type="radio" class="row__input row__select" name="gender" id="gender_female"><span>Female</span></label>
                     </div>
                     <div class="row">
                         <label for="country" class="row__label">Country</label>
@@ -64,13 +56,17 @@
                 </footer>
             </div>
             <div class="side side-profile">
-                <h2 class="title_2">Profile</h2>
+                <h2 class="side-title">Profile</h2>
                 <form id="profile-form" class="form profile-form" name="profile-form" action="#" method="post" enctype="multipart/form-data">
                     <input type="hidden" name="form_name" value="Profile form">
                     <div class="row one-col profile-photo-row">
-                        <figure class="profile-photo-row__image-outer"><img class="profile-photo-row__image" src="./assets/img/profile_photo.png" alt="Profile photo"></figure>
+                        <figure class="profile-photo-row__image-outer">
+                            <img class="profile-photo-row__image" src="./assets/img/profile_photo.png" alt="Profile photo">
+                        </figure>
                         <div class="profile-photo-row__btns-outer">
-                            <label for="profile_pic" class="row__label profile-photo-row__label"><input type="file" id="profile_pic" name="profile_pic" class="row__input" accept=".jpg, .jpeg, .png, .webp" ></label>
+                            <label for="profile_pic" class="row__label profile-photo-row__label">
+                                <input type="file" id="profile_pic" name="profile_pic" class="row__input" accept=".jpg, .jpeg, .png, .webp" >
+                            </label>
                             <button id="profile_photo_remove" class="btn btn-remove btn--inline-block profile-photo-row__btn" type="button">Remove</button>
                             <span class="note profile-photo-row__note">Up to 1 MB (300x300 px)</span>
                          </div>

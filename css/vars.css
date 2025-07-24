@@ -1,4 +1,6 @@
 :root {
+	--html-font-size: 10px;
+	--html-font-size-mobile: 12px;
 	--main-font-family: "Roboto", sans-serif;
 	--main-font-size:1.5rem;
 	--main-font-color:#545454;
