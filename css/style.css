@@ -63,6 +63,22 @@ display: block;
 width:100%;
 }
 
+.btn--inline-block {
+    display: inline-block;
+}
+
+.btn-remove {
+    font-size: 0rem;
+    height: 30px;
+    line-height: 1.8rem;
+    padding: 4px 10px;
+    color: #fff;
+    background-color: #fff;
+    border-color: var(--borders-color);
+    min-width: 3rem;
+    background: #fff url(./../assets/img/trash_icon.png) no-repeat 50% 50%;
+}
+
 .btn:hover {
     background-color: #fff;
     color: #007BFF;
@@ -81,7 +97,7 @@ width:100%;
     flex-wrap: wrap;
     gap:30px;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .side {
@@ -105,7 +121,7 @@ width:100%;
 .form {
     display: flex;
     justify-content: space-between;
-    row-gap: 12px;
+    gap: 20px 10px;
     flex-flow: row wrap;
 
 
@@ -143,10 +159,14 @@ select {
 .row__input,
 .row__select {
     line-height: 2.4rem;
-    border: 1px solid #e4e4e4;
+    border: 1px solid var(--borders-color);
     border-radius: 6px;
-    padding: 7px 10px;
+    padding: 6px 10px;
     width: 100%;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: var(--main-font-color);
 }
 
 .row__input[type='checkbox'],
@@ -155,8 +175,62 @@ select {
     padding: initial;
 }
 
+.radio-row {
+
+}
+
+
+.row__radio-label {
+  position: relative;
+  padding-left: 26px;
+  cursor: pointer;
+  display: inline-block;
+  user-select: none;
+  margin-right:20px;
+}
+
+.row__radio-label::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0px;
+  width: 18px;
+  height: 18px;
+  border: 1px solid var(--borders-color);
+  border-radius: 50%;
+  background: #fff;
+  transition: border-color 0.2s;
+}
+
+.row__radio-label input[type="radio"]:checked + span::before {
+  content: '';
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 10px;
+  height: 10px;
+  background: #ffffff;
+  border-radius: 50%;
+  border: 5px solid var(--accent-color);
+}
+
+.row__radio-label span {
+  display: inline-block;
+}
+
+.row__radio-label:hover::before {
+  border-color: var(--accent-color);
+}
+
+.row__input[type='radio'] {
+    display: none;
+}
+
 .row__input[type='file'] {
     appearance: none;
+    padding: 4px 10px;
+    max-width: 13.8rem;
+    line-height: 2rem;
 }
 
 
@@ -169,6 +243,7 @@ select {
 }
 
 .row__input {
+    margin-bottom: 0px;
 
 }
 
@@ -180,6 +255,36 @@ select {
     appearance:none;
     position: relative;
 }
+
+
+.row__select-wrapper {
+  position: relative;
+  margin-bottom: 7px;
+}
+
+.row__select-wrapper select {
+  padding-right: 38px;
+  cursor: pointer;
+  margin-bottom: 0;
+}
+
+.row__select-wrapper::after {
+  content: "";
+  background: url('./../assets/img/select_arrows.png') no-repeat;
+  width:18px;
+  height: 18px;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 18px;
+}
+
+
+
+
+
 
 .row__select option {
   appearance: none;
@@ -193,45 +298,33 @@ select {
   color: #54545466;
 }
 
-
-.row__select::after {
-    content: "^";
-    position: absolute;
-    right: 10px;
-    top:10px;
-    color: red;
-    width: 10px;
-    height: 10px;
-
-}
-
-.file-row__label {
-  display: inline-block;
+.profile-photo-row__label {
+  /* display: inline-block;
   cursor: pointer;
-  -padding: 6px 12px;
-  -background-color: #eee;
   border: 1px solid #ccc;
   border-radius: 4px;
   color: #333;
+  margin: 0; */
 }
-.file-row__label input {
+.profile-photo-row__label input {
   -display: none;
 }
 
-.file-row__label input[type="file"]::file-selector-button {
+.profile-photo-row__label input[type="file"]::file-selector-button {
     color: transparent;
     background: #fff url(./../assets/img/camera_icon.png) no-repeat 95% center;
     border: none;
-    line-height: 2.4rem;
-    border: 1px solid #e4e4e4;
+    line-height: 2.0rem;
+    border: 0px solid var(--borders-color);
     border-radius: 6px;
-    padding: 7px 10px;
     width: 100%;
-    margin: 0; padding: 0;
+    margin: 0; 
+    padding: 4px 10px;
+    max-width: 13.8rem;
 }
 
 .row .btn--block {
-    margin-top:20px;
+    /* margin-top:20px; */
 }
 
 input:focus,
@@ -241,7 +334,7 @@ select:focus {
 
 .form-bottom-row {
     text-align: center;
-    padding: 22px 45px 20px;
+    padding: 0px 45px 20px;
 }
 
 .form-bottom-row a {
@@ -255,8 +348,42 @@ select:focus {
 
 }
 
+.profile-photo-row {
+    display: flex;
+    align-items: center;
+}
+
+.profile-photo-row__image-outer {
+    width:100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    max-width: 80px;
+    margin-right: 2rem;
+}
+
+.profile-photo-row__image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+    border-radius: 50%;
+    display: block;
+}
+
+.profile-photo-row__btns-outer {
+    display: flex;
+    gap: 9px 10px;
+    align-items: center;
+    flex-flow: wrap row;
+    height: auto;
+}
+
+.profile-photo-row__note {
+    width: 100%;
+}
+
 .side-footer {
-    padding: 20px 0px 16px;
+    padding: 20px 0px 0px;
     border-top: 1px solid #E4E4E4;
 }
 
@@ -275,9 +402,14 @@ select:focus {
 
 
 
-.small {
+.note {
+    display: block;
     color: var(--secondary-color);
     font-size: 1.3rem;
     line-height: 1.8rem;
+
 }
 
+input + .note {
+    margin-top:7px;
+}

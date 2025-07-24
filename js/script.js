@@ -1,12 +1,25 @@
-btn.addEventListener('click', () => {
-  const item = btn.closest('.cart-block__img-file');
-  item.remove();
-  el.value = ''; // ключевая строка
+const btn = document.getElementById('profile_photo_remove');
+const inputFile = document.getElementById('profile_pic');
+const previewImage = document.querySelector('.profile-photo-row__image');
+
+// При выборе файла — обновляем preview
+inputFile.addEventListener('change', () => {
+  const file = inputFile.files[0];
+
+  if (file) {
+    const reader = new FileReader();
+    reader.onload = function (e) {
+      previewImage.src = e.target.result;
+    };
+    reader.readAsDataURL(file);
+  }
 });
 
-function clearFileInput() {
-    const fileInput = document.getElementById('fileInput');
-    fileInput.value = null; // или fileInput.value = "";
-    // Или, если input находится внутри формы:
-    // fileInput.form.reset();
-  }
+// При клике на Remove — сбрасываем input и картинку
+btn.addEventListener('click', () => {
+  inputFile.value = '';
+  previewImage.src = './assets/img/profile_photo.png'; // путь по умолчанию
+});
+
+  const input = document.getElementById('profile_phone');
+    Inputmask("+38 (099) 999-9999").mask(input);
