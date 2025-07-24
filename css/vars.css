@@ -2,12 +2,12 @@
 	--html-font-size: 10px;
 	--html-font-size-mobile: 12px;
 	--main-font-family: "Roboto", sans-serif;
-	--main-font-size:1.5rem;
-	--main-font-color:#545454;
-	--main-background-color: #F7F7F7;
+	--main-font-size: 1.5rem;
+	--main-font-color: #545454;
+	--main-background-color: #f7f7f7;
 	--container-width: 1200px;
-	--header-color: #1C1C1C;
-	--accent-color: #007BFF;
+	--header-color: #1c1c1c;
+	--accent-color: #007bff;
 	--secondary-color: #969696;
 	--borders-color: #e4e4e4;
 }

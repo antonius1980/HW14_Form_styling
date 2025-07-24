@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Sign Up Form</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -12,20 +12,27 @@
         <div class="container flex-container">
             <div class="side side-signup">
                 <h2 class="side-title">Create an Account</h2>
-                <form  id="signup_form" class="form signup-form" name="signup-form" action="#" method="post">
+                <form id="signup_form" class="form signup-form" name="signup-form" action="#" method="post">
                     <input type="hidden" name="form_name" id="form_name" value="Signup form">
                     <div class="row">
-                        <label for="first_name" class="row__label">First Name</label><input type="text" id="first_name" name="first_name" class="row__input" placeholder="Your first name">
+                        <label for="first_name" class="row__label">First Name</label><input type="text" id="first_name"
+                            name="first_name" class="row__input" placeholder="Your first name">
                     </div>
                     <div class="row">
-                        <label for="last_name" class="row__label">Last Name</label><input type="text" id="last_name" name="last_name" class="row__input" placeholder="Your last name">
+                        <label for="last_name" class="row__label">Last Name</label><input type="text" id="last_name"
+                            name="last_name" class="row__input" placeholder="Your last name">
                     </div>
                     <div class="row one-col">
-                        <label for="email" class="row__label">E-mail</label><input type="email" id="email" name="email" class="row__input" placeholder="username@email.com">
+                        <label for="email" class="row__label">E-mail</label><input type="email" id="email" name="email"
+                            class="row__input" placeholder="username@email.com">
                         <span class="note">We'll never share your email with anyone else.</span>
                     </div>
                     <div class="row radio-row one-col">
-                        <label for="gender_male" class="row__label row__radio-label"><input type="radio" class="row__input row__select" name="gender" id="gender_male"><span>Male</span></label><label for="gender_female" class="row__label row__radio-label"><input type="radio" class="row__input row__select" name="gender" id="gender_female"><span>Female</span></label>
+                        <label for="gender_male" class="row__label row__radio-label"><input type="radio"
+                                class="row__input row__select" name="gender"
+                                id="gender_male"><span>Male</span></label><label for="gender_female"
+                            class="row__label row__radio-label"><input type="radio" class="row__input row__select"
+                                name="gender" id="gender_female"><span>Female</span></label>
                     </div>
                     <div class="row">
                         <label for="country" class="row__label">Country</label>
@@ -40,15 +47,17 @@
                         </div>
                     </div>
                     <div class="row">
-                        <label for="city" class="row__label ">City</label><input type="text" id="city" class="row__input" placeholder="Your city">
+                        <label for="city" class="row__label ">City</label><input type="text" id="city"
+                            class="row__input" placeholder="Your city">
                     </div>
                     <div class="row one-col">
                         <button id="submit" class="btn btn-primary btn--block" type="submit">Sign Up</button>
                     </div>
                     <div class="row one-col form-bottom-row">
-                        <p class="note">By clicking the 'Sign Up' button, you confirm that you accept our<br><a class="form-bottom-row__link" href="#">Terms of Use</a>
-                         and <a  class="form-bottom-row__link" href="#">Privacy Policy</a>
-                        </p>                    
+                        <p class="note">By clicking the 'Sign Up' button, you confirm that you accept our<br><a
+                                class="form-bottom-row__link" href="#">Terms of Use</a>
+                            and <a class="form-bottom-row__link" href="#">Privacy Policy</a>
+                        </p>
                     </div>
                 </form>
                 <footer class="side-footer">
@@ -57,25 +66,32 @@
             </div>
             <div class="side side-profile">
                 <h2 class="side-title">Profile</h2>
-                <form id="profile-form" class="form profile-form" name="profile-form" action="#" method="post" enctype="multipart/form-data">
+                <form id="profile-form" class="form profile-form" name="profile-form" action="#" method="post"
+                    enctype="multipart/form-data">
                     <input type="hidden" name="form_name" value="Profile form">
                     <div class="row one-col profile-photo-row">
                         <figure class="profile-photo-row__image-outer">
-                            <img class="profile-photo-row__image" src="./assets/img/profile_photo.png" alt="Profile photo">
+                            <img class="profile-photo-row__image" src="./assets/img/profile_photo.png"
+                                alt="Profile photo">
                         </figure>
                         <div class="profile-photo-row__btns-outer">
                             <label for="profile_pic" class="row__label profile-photo-row__label">
-                                <input type="file" id="profile_pic" name="profile_pic" class="row__input" accept=".jpg, .jpeg, .png, .webp" >
+                                <input type="file" id="profile_pic" name="profile_pic" class="row__input"
+                                    accept=".jpg, .jpeg, .png, .webp">
                             </label>
-                            <button id="profile_photo_remove" class="btn btn-remove btn--inline-block profile-photo-row__btn" type="button">Remove</button>
+                            <button id="profile_photo_remove"
+                                class="btn btn-remove btn--inline-block profile-photo-row__btn"
+                                type="button">Remove</button>
                             <span class="note profile-photo-row__note">Up to 1 MB (300x300 px)</span>
-                         </div>
+                        </div>
                     </div>
                     <div class="row">
-                        <label for="profile_name" class="row__label">Name</label><input type="text" id="profile_name" name="profile_name" class="row__input" placeholder="Your full name">
+                        <label for="profile_name" class="row__label">Name</label><input type="text" id="profile_name"
+                            name="profile_name" class="row__input" placeholder="Your full name">
                     </div>
                     <div class="row">
-                        <label for="profile_email" class="row__label">E-mail</label><input type="email" id="profile_email" name="profile_email" class="row__input" placeholder="username@email.com">
+                        <label for="profile_email" class="row__label">E-mail</label><input type="email"
+                            id="profile_email" name="profile_email" class="row__input" placeholder="username@email.com">
                     </div>
                     <div class="row">
                         <label for="profile_country" class="row__label">Country</label>
@@ -90,13 +106,16 @@
                         </div>
                     </div>
                     <div class="row">
-                        <label for="profile_city" class="row__label ">City</label><input type="text" id="profile_city" name="profile_city" class="row__input" placeholder="Your city">
+                        <label for="profile_city" class="row__label ">City</label><input type="text" id="profile_city"
+                            name="profile_city" class="row__input" placeholder="Your city">
                     </div>
                     <div class="row">
-                        <label for="profile_zip" class="row__label">Zip Code</label><input type="text" id="profile_zip" name="profile_zip" class="row__input" placeholder="5-6 digits zip code">
+                        <label for="profile_zip" class="row__label">Zip Code</label><input type="text" id="profile_zip"
+                            name="profile_zip" class="row__input" placeholder="5-6 digits zip code">
                     </div>
                     <div class="row">
-                        <label for="profile_phone" class="row__label">Phone Number</label><input type="tel" id="profile_phone" name="profile_phone" class="row__input" placeholder="+38 (___) ___-____">
+                        <label for="profile_phone" class="row__label">Phone Number</label><input type="tel"
+                            id="profile_phone" name="profile_phone" class="row__input" placeholder="+38 (___) ___-____">
                     </div>
                     <div class="row">
                         <button id="submit_update" class="btn btn-primary" type="submit">Update</button>
@@ -105,7 +124,7 @@
             </div>
         </div>
     </main>
-<script src="https://unpkg.com/inputmask@5.0.8/dist/inputmask.min.js"></script>
-<script src="./js/script.js"></script>
+    <script src="https://unpkg.com/inputmask@5.0.8/dist/inputmask.min.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 </html>
